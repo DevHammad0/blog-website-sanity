@@ -6,9 +6,35 @@ const blog = defineType({
   title: 'Blog',
   type: 'document',
   fields: [
-    { name: 'heading', type: 'string' },
-    { name: 'image', type: 'image' },
-    { name: 'body', type: 'text' },
+    {
+      name: 'heading',
+      type: 'string'
+    },
+    {
+      name: 'slug',
+      type: 'slug',
+      title: 'Slug',
+      options:{
+        source: 'heading'
+      }
+    },
+    {
+      name: 'image',
+      type: 'image'
+    },
+    {
+      name: 'body',
+      type: 'text'
+    },
+    {
+      name: 'content',
+      type: 'array',
+      title: 'Content',
+      of:[
+        {type: 'block'},
+        {type: 'image'}
+      ]
+    }
   ],
 });
 
