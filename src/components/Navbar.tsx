@@ -14,7 +14,7 @@ const Navbar = () => {
                     <AvatarImage src="/mypic.jpg" />
                     <AvatarFallback>H</AvatarFallback>
                 </Avatar>
-                <h1 className={`font-serif font-extrabold text-xl `}>Blogs By Hammad</h1>
+                <h1 className={`font-serif font-extrabold text-xl `}>BlogsByHammad</h1>
             </div>
             <div className="flex gap-2">
                 {/* <Link href="https://www.linkedin.com/in/-hammad/" className={`${buttonVariants({ variant: "secondary", size: "icon" })} transition duration-500 ease-in-out hover:border-b hover:border-slate-800`}>
