@@ -1,6 +1,5 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from "next/link"
 import { buttonVariants } from "./ui/button"
 import Image from "next/image"
@@ -8,13 +7,11 @@ import { ModeToggle } from "./ModeToggle"
 
 const Navbar = () => {
     return (
-        <nav className={`flex justify-between py-4 px-6  border bottom-2`}>
+        <nav className={`flex justify-between py-4 px-6  border-b-2`}>
             <div className="flex items-center gap-2">
-                <Avatar>
-                    <AvatarImage src="/mypic.jpg" />
-                    <AvatarFallback>H</AvatarFallback>
-                </Avatar>
-                <h1 className={`font-serif font-extrabold text-xl `}>BlogsByHammad</h1>
+                <Link href="/"><Image src="/mypic.jpg" alt="mypic-logo" className="h-10 w-10 shrink-0 overflow-hidden rounded-full" priority width={45} height={45} /></Link>
+                <Link href="/"><h1 className={`font-extrabold text-2xl tracking-tight`}>Blogs<span className="mycolor">ByHammad</span></h1>
+            </Link>
             </div>
             <div className="flex gap-2">
                 {/* <Link href="https://www.linkedin.com/in/-hammad/" className={`${buttonVariants({ variant: "secondary", size: "icon" })} transition duration-500 ease-in-out hover:border-b hover:border-slate-800`}>

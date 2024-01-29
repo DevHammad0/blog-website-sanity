@@ -32,7 +32,6 @@ const blog = defineType({
       title: 'Content',
       of:[
         {type: 'block'},
-        {type: 'image'}
       ]
     }
   ],
