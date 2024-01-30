@@ -7,7 +7,8 @@ import { fullBlog } from "@/types";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export const revalidate = 30;
+export const revalidate = 3600;
+
 
 const getData = async (slug: string) => {
     const query = `
@@ -29,7 +30,7 @@ const BlogArticle = async ({ params }: { params: { slug: string } }) => {
     const data: fullBlog = await getData(params.slug);
     //  console.log(data)
     return (
-        <div className="my-8 flex flex-col items-center mx-3">
+        <div className="my-8 flex flex-col items-center mx-4">
             <h1>
                 <span className="block mycolor text-sm font-semibold uppercase tracking-wide text-center"><Link href="/">Hammad - Blog</Link></span>
                 <span className="mt-2 block text-3xl sm:text-4xl text-center font-bold leading-8 tracking-tight">{data.heading}</span>

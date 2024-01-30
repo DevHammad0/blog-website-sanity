@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { BlogCard } from "@/types";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 
 const BlogPosts = async () => {

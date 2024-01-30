@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <nav className={`flex justify-between py-4 px-6  border-b-2`}>
             <div className="flex items-center gap-2">
-                <Link href="/"><Image src="/mypic.jpg" alt="mypic-logo" className="h-10 w-10 shrink-0 overflow-hidden rounded-full" priority width={45} height={45} /></Link>
+                <Link href="/"><Image src="/logo.png" alt="mypic-logo" className="h-10 w-10 shrink-0 rounded-full overflow-hidden" priority width={40} height={40} /></Link>
                 <Link href="/"><h1 className={`font-extrabold text-2xl tracking-tight`}>Blogs<span className="mycolor">ByHammad</span></h1>
             </Link>
             </div>
