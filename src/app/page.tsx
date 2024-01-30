@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { BlogCard } from "@/types";
 
-export const revalidate = 3600;
+// export const revalidate = 3600;
 
 
 const BlogPosts = async () => {
@@ -31,7 +31,7 @@ export default async function Home() {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 m-6 gap-8">
         {data.map((post, idx) => (
           <Card key={idx} className="flex flex-col transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-102">
-            <Image src={urlForImage(post.image)} alt="image" width={1000} height={1000} />
+            <Image src={urlForImage(post.image)} alt="image" priority width={1000} height={1000} />
             <CardContent className="mt-2 flex-grow">
               <h3 className="text-xl font-semibold line-clamp-1">{post.heading}</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-3 ">{post.body}</p>

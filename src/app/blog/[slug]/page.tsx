@@ -7,7 +7,10 @@ import { fullBlog } from "@/types";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export const revalidate = 3600;
+// export const revalidate = 12;
+
+// export const dynamic = 'force-dynamic'
+// // 'auto' | 'force-dynamic' | 'error' | 'force-static'
 
 
 const getData = async (slug: string) => {
